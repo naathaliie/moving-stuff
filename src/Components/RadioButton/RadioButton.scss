@@ -1,0 +1,41 @@
+.RadioButton {
+    //Input aka själva radioButton
+    input {
+      &:hover {
+        cursor: pointer;
+        animation: hoverAnimation 250ms step-end;
+      }
+
+      
+      //När en radiobtn är checked(iklickad) skall label texten bli större
+      &:checked + label {
+        font-size: larger;
+        border: solid grey 1px;
+      }
+    }
+
+    //label aka själva texten till varje knapp
+    label {
+        
+      &:hover {
+        cursor: pointer;
+        border-bottom: solid 1px grey;
+        
+      }
+      &:active{
+        font-size: x-large;
+      }
+
+    }
+  
+}
+@keyframes hoverAnimation {
+    0%,
+	100% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(5px);
+	}
+    
+}
