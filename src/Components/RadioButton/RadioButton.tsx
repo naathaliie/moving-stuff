@@ -16,7 +16,7 @@ const RadioButton = () => {
   return (
     <div className="RadioButton">
       <form action="">
-        <legend>Välj en dryck:</legend>
+        <legend>Välj:</legend>
 
         <div>
           <input
@@ -26,7 +26,7 @@ const RadioButton = () => {
             className="input"
             onClick={handleOnClick}
           />
-          <label htmlFor="val1">Kaffe</label>
+          <label htmlFor="val1">val 1</label>
         </div>
         <div>
           <input
@@ -36,7 +36,7 @@ const RadioButton = () => {
             className="input"
             onClick={handleOnClick}
           />
-          <label htmlFor="val2">Te</label>
+          <label htmlFor="val2">val 2</label>
         </div>
         <div>
           <input
@@ -47,7 +47,7 @@ const RadioButton = () => {
             onClick={handleOnClick}
           />
           <label className="input" htmlFor="val3">
-            Vatten
+            val 3
           </label>
         </div>
       </form>
