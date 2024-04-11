@@ -13,6 +13,7 @@ const TheInputField = () => {
   const [inputValue, setInputValue] = useState<string>("");
   //Ändra texten på knappen om den är aktiv eller inte
   const [btnText, setBtnText] = useState<string>("Inaktiv");
+  //Array för att samla in alla inputs
   const [collectedInputs, setCollectedinputs] = useState<string[]>([]);
 
   const handleClick = () => {
@@ -38,14 +39,14 @@ const TheInputField = () => {
             setInputValue(value);
             setBtnText(value !== "" ? "Aktiv" : "Inaktiv");
           }}
-          onKeyDown={handleKeyDown} // Lägg till onKeyDown-händelsen
+          onKeyDown={handleKeyDown} // Gör att man kan trycka på Enter
         />
       </div>
 
       <div className="btn-box">
         <button
           className={`btn `}
-          disabled={inputValue === ""}
+          disabled={inputValue === ""} //True när input-fältet är tomt, annars false (ej disable)
           onClick={handleClick}
         >
           {btnText}
