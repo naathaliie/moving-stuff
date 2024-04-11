@@ -1,0 +1,44 @@
+.DivButton {
+  margin: 1rem;
+  padding: 1rem;
+  border: dotted 2px pink;
+  max-width: 20rem;
+  height: auto;
+  color: red;
+  .fake-btn {
+    border: solid black 2px;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 200ms linear;
+    background-color: black;
+    color: greenyellow;
+
+    &:hover {
+      font-size: large;
+    }
+
+    &:active {
+      
+    }
+  }
+
+  .clicked {
+    background-color: yellow;
+    animation: bigger 500ms ease;
+  }
+}
+
+@keyframes bigger {
+  0%,
+  100% {
+    width: 6rem;
+    height: 6rem;
+  }
+  50% {
+    width: 10rem;
+    height: 10rem;
+  }
+}
