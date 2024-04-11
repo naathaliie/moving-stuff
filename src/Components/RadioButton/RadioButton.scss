@@ -1,4 +1,9 @@
 .RadioButton {
+    margin: 1rem;
+    padding: 1rem;
+    border: dotted 2px hotpink;
+    max-width: 20rem;
+    height: auto;
     //Input aka själva radioButton
     input {
       &:hover {
