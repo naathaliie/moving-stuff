@@ -9,8 +9,10 @@ import { useState } from "react";
 import "./TheInputField.scss";
 
 const TheInputField = () => {
-  //För att samla in vad som skrivs i inpitfältet
+  //För att samla in vad som skrivs i inputfältet
   const [inputValue, setInputValue] = useState<string>("");
+  //Ändra texten på knappen om den är aktiv eller inte
+  const [btnText, setBtnText] = useState<string>("Inaktiv");
 
   return (
     <div className="TheInputField">
@@ -20,14 +22,16 @@ const TheInputField = () => {
           placeholder="Skriv något"
           value={inputValue}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-            setInputValue(e.target.value);
+            const value = e.target.value;
+            setInputValue(value);
+            setBtnText(value !== "" ? "Aktiv" : "Inaktiv");
           }}
         />
       </div>
 
       <div className="btn-box">
         <button className={`btn `} disabled={inputValue === ""}>
-          klicka mig
+          {btnText}
         </button>
       </div>
 

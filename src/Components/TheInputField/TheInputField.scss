@@ -1,7 +1,38 @@
-.TheInputField{
-    margin: 1rem;
-    padding: 1rem;
-    border: dotted 2px pink;
-    max-width: 20rem;
-    height: auto;
+.TheInputField {
+  margin: 1rem;
+  padding: 1rem;
+  border: dotted 2px pink;
+  max-width: 20rem;
+  height: auto;
+
+  .btn-box {
+    .btn {
+      width: 4em;
+      height: 1.5em;
+      background-color: hotpink;
+      color: white;
+
+      //Om knappen är disabled
+      &:disabled {
+        background-color: rgb(229, 228, 228);
+        color: grey;
+      }
+
+      //Animationen sker förs när knappen inte längre är disbled
+      &:not(:disabled) {
+        animation: Button 500ms;
+      }
+    }
+  }
+}
+
+@keyframes Button {
+  0% {
+    background-color: rgb(229, 228, 228);
+    color: grey;
+  }
+  100% {
+    background-color: hotpink;
+    color: white;
+  }
 }
