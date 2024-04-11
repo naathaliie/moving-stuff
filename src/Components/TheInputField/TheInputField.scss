@@ -9,8 +9,10 @@
     .btn {
       width: 4em;
       height: 1.5em;
+      margin: 5px;
       background-color: hotpink;
       color: white;
+      transition: background-color 200ms;
 
       //Om knappen är disabled
       &:disabled {
@@ -21,6 +23,31 @@
       //Animationen sker förs när knappen inte längre är disbled
       &:not(:disabled) {
         animation: Button 500ms;
+
+        &:hover {
+          background-color: rgb(220, 41, 130);
+        }
+        //När knappen klickas på
+        &:active {
+          animation: activeButton 100ms linear;
+        }
+      }
+    }
+  }
+
+  .li-box {
+    ul {
+      list-style: none;
+      li {
+        animation: addLi 1s;
+        border: solid purple 2px;
+        background-color: hotpink;
+        color: white;
+        margin-bottom: 5px;
+        max-width: 10rem;
+        max-height: 10rem;
+        overflow-x: hidden;
+        overflow-y: auto;
       }
     }
   }
@@ -35,4 +62,28 @@
     background-color: hotpink;
     color: white;
   }
+}
+
+@keyframes activeButton {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+@keyframes addLi {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    50% {
+        width: 50%; /* Öka bredden till 50% */
+        opacity: 50%; /* Öka opaciteten till 50% */
+    }
+    100% {
+        width: auto;
+        opacity: 100%;
+    }
 }
