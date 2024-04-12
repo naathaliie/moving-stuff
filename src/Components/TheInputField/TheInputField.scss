@@ -29,7 +29,8 @@
         }
         //När knappen klickas på
         &:active {
-          animation: activeButton 100ms linear;
+          transform: scale(1.3);
+          color: black;
         }
       }
     }
