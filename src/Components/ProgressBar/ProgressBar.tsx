@@ -26,13 +26,13 @@ const ProgressBar = () => {
         ></div>
       </div>
       <div className="checkbox-Box">
-        <div className="Done25">
-          <label htmlFor="Done25">
+        <div className="checkBoxA">
+          <label htmlFor="checkBoxA">
             <input
               type="checkbox"
-              id="Done25"
+              id="checkBoxA"
               checked={checked_A}
-              onClick={() => {
+              onChange={() => {
                 setchecked_A(!checked_A);
                 if (checked_A === false) {
                   dispatch({ type: ACTIONS.ADD, payload: 25 });
@@ -44,13 +44,13 @@ const ProgressBar = () => {
             A
           </label>
         </div>
-        <div className="Done50">
-          <label htmlFor="Done50">
+        <div className="checkBoxB">
+          <label htmlFor="checkBoxB">
             <input
               type="checkbox"
-              id="Done50"
+              id="checkBoxB"
               checked={checked_B}
-              onClick={() => {
+              onChange={() => {
                 setchecked_B(!checked_B);
                 if (checked_B === false) {
                   dispatch({ type: ACTIONS.ADD, payload: 25 });
@@ -62,12 +62,12 @@ const ProgressBar = () => {
             B
           </label>
         </div>
-        <div className="Done75">
-          <label htmlFor="Done75">
+        <div className="checkBoxC">
+          <label htmlFor="checkBoxC">
             <input
               type="checkbox"
-              id="Done75"
-              onClick={() => {
+              id="checkBoxC"
+              onChange={() => {
                 setChecked_C(!checked_C);
                 if (checked_C === false) {
                   dispatch({ type: ACTIONS.ADD, payload: 25 });
@@ -79,12 +79,12 @@ const ProgressBar = () => {
             C
           </label>
         </div>
-        <div className="Done100">
-          <label htmlFor="Done100">
+        <div className="checkBoxD">
+          <label htmlFor="checkBoxD">
             <input
               type="checkbox"
-              id="Done100"
-              onClick={() => {
+              id="checkBoxD"
+              onChange={() => {
                 setChecked_D(!checked_D);
                 if (checked_D === false) {
                   dispatch({ type: ACTIONS.ADD, payload: 25 });
