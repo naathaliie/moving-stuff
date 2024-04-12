@@ -1,0 +1,30 @@
+.ProgressBar {
+  color: hotpink;
+  margin: 1rem;
+  padding: 1rem;
+  border: dotted 2px pink;
+  max-width: 20rem;
+  height: auto;
+
+.theProgressbar-Box{
+    width: 15rem;
+    height: 1rem;
+    border: black solid 2px;
+
+    .theProgress{
+        background-color: hotpink;
+        height: 98%;
+        
+    }
+}
+
+  .checkbox-Box{
+    input[type="checkbox"]{
+        margin-right: 10px;
+        transform: scale(1.5); /* För att göra checkboxen 1.5 gånger större */
+    }
+    label{
+        font-size: 20px;
+    }
+  }
+}
