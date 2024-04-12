@@ -3,11 +3,13 @@ När man klickar i en checkbox animerar vi att progressbaren
 går upp ett steg. När alla checkboxar är iklickade så är baren full. 
 Klickar man ur animerar vi att baren krymper ner ett steg. */
 
-import { useState } from "react";
+import { useReducer, useState } from "react";
 import "./ProgressBar.scss";
+import { progressBarReducer } from "./progressBarReducer";
 
 const ProgressBar = () => {
-  const [width, setWidth] = useState<string>("0%");
+  const [width, setWidth] = useState<number>(0);
+  const [state, dispatch] = useReducer(progressBarReducer, { progress: 0 });
 
   return (
     <div className="ProgressBar">
