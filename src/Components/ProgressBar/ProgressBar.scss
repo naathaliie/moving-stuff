@@ -6,25 +6,30 @@
   max-width: 20rem;
   height: auto;
 
-.theProgressbar-Box{
+  .theProgressbar-Box {
     width: 15rem;
     height: 1rem;
     border: black solid 2px;
 
-    .theProgress{
-        background-color: hotpink;
-        height: 98%;
-        
+    .theProgress {
+      background-color: hotpink;
+      height: 98%;
+      //Transition kommer att utföras när width ändrar värde
+      transition: width 1s;
     }
-}
+  }
 
-  .checkbox-Box{
-    input[type="checkbox"]{
-        margin-right: 10px;
-        transform: scale(1.5); /* För att göra checkboxen 1.5 gånger större */
-    }
-    label{
-        font-size: 20px;
+  .checkbox-Box {
+    input[type="checkbox"] {
+      margin-right: 10px;
+      transform: scale(1.5); /* För att göra checkboxen 1.5 gånger större */
+    &:hover {
+        transform: scale(1.8);/* Gör checkboxen större när man hoovrar över den */
+      }}
+    label {
+      font-size: 20px;
+      
     }
   }
 }
+
