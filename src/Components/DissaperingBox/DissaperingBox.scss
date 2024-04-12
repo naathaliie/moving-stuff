@@ -1,0 +1,36 @@
+.DissaperingBox{
+    margin: 1rem;
+    padding: 1rem;
+    border: dotted 2px pink;
+    max-width: 20rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.3s ease, height 0.3s ease, visibility 0.3s;
+    
+    &.hide{
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
+    }
+    .close-btn{
+        border: solid black 2px;
+        padding: 2px;
+        margin: 2px;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 15%;
+        align-self: flex-end;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover{
+            cursor: pointer;
+        }
+
+       
+        
+    }
+}
+

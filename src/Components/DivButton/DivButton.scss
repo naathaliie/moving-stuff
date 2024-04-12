@@ -28,7 +28,9 @@
   .clicked {
     background-color: yellow;
     animation: bigger 500ms ease;
-  }
+    /* background-image: url('../../assets/img/fYou.png');
+    background-size: cover; */
+}
 }
 
 @keyframes bigger {
