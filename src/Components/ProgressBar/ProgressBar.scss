@@ -5,6 +5,8 @@
   border: dotted 2px pink;
   max-width: 20rem;
   height: auto;
+  display: flex;
+  flex-direction: column;
 
   .theProgressbar-Box {
     width: 15rem;
@@ -30,6 +32,13 @@
       font-size: 20px;
       
     }
+  }
+  
+    
+  .reset-btn{
+    align-self: center;
+    width: 3rem;
+    height: 1.5rem;
   }
 }
 
