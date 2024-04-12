@@ -1,10 +1,6 @@
 /* Gör en komponent som är en ruta med kryss uppe i högra hörnet. 
 När man klickar på krysset ska rutan försvinna med en animation.
-
-UTMANING: tänk Modal. Lägg rutan mitt på skärmen. 
-Mörka ner allt utanför modalen och gör så att om man klickar 
-utanför modalen (på det mörka) så stängs modalen.
- */
+*/
 import { useEffect, useState } from "react";
 import "./DissaperingBox.scss";
 
