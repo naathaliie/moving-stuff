@@ -6,12 +6,14 @@
 /* Gör en egen typ för Action med en unionType, vilket innebär att Action kan vara antingen det ena eller det andra*/
 export type Action = 
     |{type: typeof ACTIONS.ADD; payload:number}
-    |{type: typeof ACTIONS.REMOVE; payload:number};
+    |{type: typeof ACTIONS.REMOVE; payload:number}
+    |{type: typeof ACTIONS.RESET; payload:number};
 
 //Skapar upp alla olika val jag vill kunna använda som action i switch-satsen
 export const ACTIONS = {
     ADD: "add",
     REMOVE:"remove",
+    RESET: "reset",
 };
 
 /* När jag kallar på dispatch (som är progressBarReducer-funktionen) skall följande ske.
@@ -22,6 +24,8 @@ export const progressBarReducer = (state:State, action: Action) => {
            return {progress: state.progress + action.payload};
         case ACTIONS.REMOVE:
             return {progress: state.progress - action.payload};
+        case ACTIONS.RESET:
+            return {progress: state.progress - state.progress};
         default:
             return state;
     }

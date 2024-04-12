@@ -97,6 +97,19 @@ const ProgressBar = () => {
           </label>
         </div>
       </div>
+
+      <button
+        className="reset-btn"
+        onClick={() => {
+          dispatch({ type: ACTIONS.RESET, payload: 0 });
+          setchecked_A(false);
+          setchecked_B(false);
+          setChecked_C(false);
+          setChecked_D(false);
+        }}
+      >
+        Reset
+      </button>
     </div>
   );
 };
