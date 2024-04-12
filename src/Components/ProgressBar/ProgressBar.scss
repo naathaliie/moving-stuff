@@ -25,21 +25,31 @@
     input[type="checkbox"] {
       margin-right: 10px;
       transform: scale(1.5); /* För att göra checkboxen 1.5 gånger större */
-    &:hover {
-        transform: scale(1.8);/* Gör checkboxen större när man hoovrar över den */
-      }}
+      &:hover {
+        transform: scale(
+          1.8
+        ); /* Gör checkboxen större när man hoovrar över den */
+      }
+    }
     label {
       font-size: 20px;
-      
     }
   }
-  
-    
-  .reset-btn{
+
+  .reset-btn {
     align-self: center;
     width: 3rem;
     height: 1.5rem;
-    
+    background-color: hotpink;
+    color: white;
+    border: purple 2px solid;
+    border-radius: 10%;
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:active {
+        box-shadow: 2px 2px 2px 0px rgba(2, 2, 2, 0.366);
+        transform: translateY(1px); /* Flytta knappen neråt när den är aktiv */    
+    }
   }
 }
-

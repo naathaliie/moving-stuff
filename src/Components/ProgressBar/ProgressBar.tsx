@@ -32,6 +32,7 @@ const ProgressBar = () => {
               type="checkbox"
               id="checkBoxA"
               checked={checked_A}
+              //Går också att sätta funktionen på onClick!
               onChange={() => {
                 setchecked_A(!checked_A);
                 if (checked_A === false) {
