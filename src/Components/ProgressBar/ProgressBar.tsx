@@ -68,6 +68,7 @@ const ProgressBar = () => {
             <input
               type="checkbox"
               id="checkBoxC"
+              checked={checked_C}
               onChange={() => {
                 setChecked_C(!checked_C);
                 if (checked_C === false) {
@@ -85,6 +86,7 @@ const ProgressBar = () => {
             <input
               type="checkbox"
               id="checkBoxD"
+              checked={checked_D}
               onChange={() => {
                 setChecked_D(!checked_D);
                 if (checked_D === false) {
